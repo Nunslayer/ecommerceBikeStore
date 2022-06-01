@@ -242,7 +242,7 @@ img {
         gap: 0.5em;
     }
     .column.column--left{
-        display: static;
+        display:grid;
         grid-template-columns: min-content;
 
     }
