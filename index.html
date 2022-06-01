@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="dark">
+    <header class="header">
+        
+        <div class="switches">
+            <div class="logo">
+                <img src="./assets/icons/specialized-icon.png" alt="" class="logo-icon">
+            </div>
+            <div class="toggle-theme">
+                <i id="toggle-icon" class="fa fa-sun toggle-theme__icon"></i>
+                <p id="toggle-text" class="toggle-theme__text">Dark Mode</p>
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li>Marcas</li>
+                    <li>Equipamiento</li>
+                    <li>Componentes</li>
+                    <li>Disciplinas</li>
+                    <li>Opcion 5</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!--Slider de la caratula-->
+    <aside class="aside">
+        
+    </aside>
+    <main class="main">
+        <section class="rows rows--presentation">
+            <div class="slider-container" id="slider-container">
+                <div class="slider" id="slider">
+                    <div class="slider__element slider__element--first">
+                    </div>
+                    <div class="slider__element slider__element--second">
+                    </div>
+                    <div class="slider__element slider__element--three">
+                    </div>
+                </div>
+            </div>
+            <div class="slider-buttons">
+                <button id="button-left" class="button button--left">&lt</button>
+                <button id="button-right" class="button button--right">&gt</button>
+            </div>
+        </section>
+        <section class="rows rows--main">
+            <div class="column column--left">
+            </div>
+            <div id="items" class="column column--right">
+            
+            </div>
+            <template id="template--card">
+                <div class="card">
+                    <img src="" alt="" class="img-card">
+                    <div class="card--body">
+                        <h2 class="card__tittle"></h2>
+                        <p class="card__price">
+
+                        </p>
+                        <button class="button btn-dark">Buy</button>
+                    </div>
+                </div>
+            </template>
+        </section>
+    </main>
+    
+    <footer class="footer"></footer>
+    <script src="./assets/js/scripts.js"></script>
+</body>
+</html>

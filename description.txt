@@ -1,0 +1,3 @@
+El presente proyecto es una E-commerce desarrollado a solicitud de Academlo como proyecto final del modulo 1 
+fundamentos de la programacion.
+
