@@ -42,13 +42,10 @@ const DIRECTION = {
     RIGHT: 'RIGHT',
     LEFT: 'LEFT'
 };
-const resizeSlide = ()=>{
-    rootStyles.setProperty('--slide-transition', 'none');
-    rootStyles.setProperty('--slide-transform', `${sliderElements[sliderCounter].scrollWidth}px`);
-    console.log(rootStyles.getPropertyValue('--slide-transform'))
-}
 
 const getTransformValue = ()=> Number(rootStyles.getPropertyValue('--slide-transform').replace('px',''));
+
+
 const reorderSlide = () => {
     const transformValue = getTransformValue();
     rootStyles.setProperty('--slide-transition', 'none');
@@ -65,6 +62,11 @@ const reorderSlide = () => {
     isInTransition=false;
 };
 
+const resizeSlide = ()=>{
+    rootStyles.setProperty('--slide-transition', 'none');
+    rootStyles.setProperty('--slide-transform', 0);
+}
+
 const moveSlide = (direction)=>{
     if(isInTransition) return
     const transformValue = getTransformValue();
@@ -73,22 +75,26 @@ const moveSlide = (direction)=>{
     if(direction === DIRECTION.LEFT){
         rootStyles.setProperty('--slide-transform', `${transformValue + sliderElements[sliderCounter].scrollWidth}px`);
         sliderCounter--;
+        console.log(rootStyles.getPropertyValue('--slide-transform'));
     }else if(direction===DIRECTION.RIGHT){
         rootStyles.setProperty('--slide-transform', `${transformValue - sliderElements[sliderCounter].scrollWidth}px`);
         sliderCounter++;
+        console.log(rootStyles.getPropertyValue('--slide-transform'));
+        console.log(sliderElements[sliderCounter].scrollWidth);
     }
-
+    
 }
 
 buttonRight.addEventListener('click', ()=>moveSlide(DIRECTION.RIGHT));
 buttonLeft.addEventListener('click', ()=>moveSlide(DIRECTION.LEFT));
 
+
 slider.addEventListener('transitionend', reorderSlide);
-sliderContainer.addEventListener('resize',reorderSlide);
-resizeSlide();
+sliderContainer.addEventListener('resize', resizeSlide);
+
 reorderSlide();
 
-
+resizeSlide();
 
 
 
