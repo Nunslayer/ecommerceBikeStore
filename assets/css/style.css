@@ -218,6 +218,7 @@ img {
 .rows--product{
     display: grid;
     grid-template-columns: 1fr;
+    gap:1 em;
 }
 
 .column{
@@ -235,6 +236,20 @@ img {
 .card{
     max-width: 300px;
 }
+
+.card--body > *{
+    margin: 0;
+    padding: 0;
+}
+
+.btn-buy{
+    background-image: url(../icons/shopping-cart\ 3.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
 @media screen and (min-width: 990px) {
     .rows--product{
         display: grid;
@@ -258,11 +273,14 @@ img {
 
 @media screen and (min-width: 760px) {
     .rows--product{
-        grid-template-rows: 320px 1fr;
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        gap: 0.5em;
     }
     .column--left{
-        position:relative;
-        z-index: 50;
+        display:grid;
+        position: relative;
+        grid-template-columns: min-content;
     }
     .column--right{
         grid-template-columns: 1fr 1fr;
