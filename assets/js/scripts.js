@@ -25,7 +25,7 @@ items.addEventListener('click', e =>{
 })
 const fechData = async () => {
     try {
-        const res = await fetch ('./api.json');
+        const res = await fetch ('./modelo-bici.json');
         const data = await res.json();
         pintarTemplateCard(data);
     } catch (error) {
@@ -35,9 +35,10 @@ const fechData = async () => {
 
 const pintarTemplateCard = data => {
     data.forEach(producto => {
-        templateCard.querySelector('h2').textContent=producto.title
-        templateCard.querySelector('p').textContent=producto.precio
-        templateCard.querySelector('img').setAttribute('src', producto.thumbnailUrl)
+        templateCard.querySelector('h2').textContent=producto.name
+        templateCard.querySelector('.card__discipline').textContent=producto.stamp
+        templateCard.querySelector('.card__price').textContent=producto.price
+        templateCard.querySelector('img').setAttribute('src', producto.images[0])
         templateCard.querySelector('.btn-buy').dataset.id = producto.id
         const clone = templateCard.cloneNode(true)
         fragmentSearch.appendChild(clone)
@@ -57,7 +58,7 @@ const setCarrito = objeto => {
     const producto = {
         id: objeto.querySelector('.btn-buy').dataset.id,
         title: objeto.querySelector('h2').textContent,
-        precio: objeto.querySelector('p').textContent,
+        precio: objeto.querySelector('.card__price').textContent,
         cantidad: 1
     }
 
@@ -92,7 +93,7 @@ const pintarCarrito = ()=>{
 const pintarFooter = () =>{
     footer.innerHTML = '';
     if(Object.keys(carrito).length===0){
-        footer.innerHTML =`<th scope="row" colspan="5">Carrito vacio - inicie sus compras!</th>`;
+        footer.innerHTML =`<th scope="row" colspan="5">Haga sus compras!</th>`;
         return
     }
 

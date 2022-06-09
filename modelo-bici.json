@@ -1,0 +1,419 @@
+[
+    {
+        "id": 1,
+        "name": "Demo Race",
+        "type": "bike",
+        "discipline": "enduro",
+        "model": "Demo",
+        "stamp": "Specialized",
+        "images":[
+            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_HERO (Custom).jpg",
+            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_RDSQ (Custom).jpg",
+            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_FDSQ (Custom).jpg",
+            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_D2-BAR (Custom).jpg",
+            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_D1-POV (Custom).jpg"
+        ],
+        "price": 1499,
+        "available": 5,
+        "tags":[
+            "enduro", 
+            "mtb",
+            "downhill",
+            "cross country"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Demo Expert",
+        "type": "Mountain Bike",
+        "discipline": "enduro",
+        "model": "Demo",
+        "stamp": "Specialized",
+        "images":[
+            "./assets/images/DEMO-EXPERT-SILDST-CHAR_HERO (Custom).jpg",
+            "./assets/images/DEMO-EXPERT-SILDST-CHAR_FDSQ (Custom).jpg",
+            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D6-LINK (Custom).jpg",
+            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D4-STTT (Custom).jpg",
+            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D3-HT (Custom).jpg",
+            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D2-BAR (Custom).jpg",
+            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D1-POV (Custom).jpg"
+        ],
+        "price": 2299,
+        "available": 4,
+        "tags":[
+            "enduro", 
+            "mtb",
+            "downhill",
+            "cross country"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Rockhopper Elite 29",
+        "type": "Tracer Bike",
+        "discipline": "race",
+        "model": "Rockhopper",
+        "stamp": "Specialized",
+        "images":[
+            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_HERO (Custom).jpg",
+            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_RDSQ (Custom).jpg",
+            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_FDSQ (Custom).jpg",
+            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_D3-HT (Custom).jpg",
+            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_D1-POV (Custom).jpg"
+        ],
+        "price": 1999,
+        "available": 2,
+        "tags":[
+            "race", 
+            "profesional",
+            "tracer",
+            "cross country"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Rockhopper Elite 27",
+        "type": "Tracer Bike",
+        "discipline": "race",
+        "model": "Rockhopper",
+        "stamp": "Specialized",
+        "images":[
+            "./assets/images/ROCKHOPPER-ELITE-27-CSTBLK-BLK_HERO (Custom).jpg",
+            "./assets/images/ROCKHOPPER-ELITE-27-CSTBLK-BLK_RDSQ (Custom).jpg",
+            "./assets/images/ROCKHOPPER-ELITE-27-CSTBLK-BLK_FDSQ (Custom).jpg"
+        ],
+        "price": 1899,
+        "available": 4,
+        "tags":[
+            "race", 
+            "profesional",
+            "tracer",
+            "cross country"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Kenevo SW 29",
+        "type": "Mountain Bike",
+        "discipline": "downhill",
+        "model": "Kenevo",
+        "stamp": "Specialized",
+        "images":[
+            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_HERO (Custom).jpg",
+            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_RDSQ (Custom).jpg",
+            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_FDSQ (Custom).jpg",
+            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_D1-POV (Custom).jpg",
+            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_D2-BAR (Custom).jpg",
+            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_D3-HT (Custom).jpg"
+        ],
+        "price": 2599,
+        "available": 3,
+        "tags":[
+            "enduro", 
+            "mtb",
+            "downhill",
+            "cross country"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Kenevo TURBO 29",
+        "type": "Mountain Bike",
+        "discipline": "downhill",
+        "model": "Kenevo",
+        "stamp": "Specialized",
+        "images":[
+            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_HERO (Custom).jpg",
+            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_RDSQ (Custom).jpg",
+            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_D4-STTT (Custom).jpg",
+            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_D3-HT (Custom).jpg",
+            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_FDSQ (Custom).jpg"
+        ],
+        "price": 2799,
+        "available": 5,
+        "tags":[
+            "enduro", 
+            "mtb",
+            "downhill",
+            "cross country"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Demo Race",
+        "type": "bike",
+        "discipline": "enduro",
+        "model": "Demo",
+        "stamp": "Specialized",
+        "images":[
+            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_HERO (Custom).jpg",
+            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_RDSQ (Custom).jpg",
+            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_FDSQ (Custom).jpg",
+            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_D2-BAR (Custom).jpg",
+            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_D1-POV (Custom).jpg"
+        ],
+        "price": 1499,
+        "available": 5,
+        "tags":[
+            "enduro", 
+            "mtb",
+            "downhill",
+            "cross country"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Demo Expert",
+        "type": "Mountain Bike",
+        "discipline": "enduro",
+        "model": "Demo",
+        "stamp": "Specialized",
+        "images":[
+            "./assets/images/DEMO-EXPERT-SILDST-CHAR_HERO (Custom).jpg",
+            "./assets/images/DEMO-EXPERT-SILDST-CHAR_FDSQ (Custom).jpg",
+            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D6-LINK (Custom).jpg",
+            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D4-STTT (Custom).jpg",
+            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D3-HT (Custom).jpg",
+            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D2-BAR (Custom).jpg",
+            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D1-POV (Custom).jpg"
+        ],
+        "price": 2299,
+        "available": 4,
+        "tags":[
+            "enduro", 
+            "mtb",
+            "downhill",
+            "cross country"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Rockhopper Elite 29",
+        "type": "Tracer Bike",
+        "discipline": "race",
+        "model": "Rockhopper",
+        "stamp": "Specialized",
+        "images":[
+            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_HERO (Custom).jpg",
+            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_RDSQ (Custom).jpg",
+            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_FDSQ (Custom).jpg",
+            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_D3-HT (Custom).jpg",
+            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_D1-POV (Custom).jpg"
+        ],
+        "price": 1999,
+        "available": 2,
+        "tags":[
+            "race", 
+            "profesional",
+            "tracer",
+            "cross country"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Rockhopper Elite 27",
+        "type": "Tracer Bike",
+        "discipline": "race",
+        "model": "Rockhopper",
+        "stamp": "Specialized",
+        "images":[
+            "./assets/images/ROCKHOPPER-ELITE-27-CSTBLK-BLK_HERO (Custom).jpg",
+            "./assets/images/ROCKHOPPER-ELITE-27-CSTBLK-BLK_RDSQ (Custom).jpg",
+            "./assets/images/ROCKHOPPER-ELITE-27-CSTBLK-BLK_FDSQ (Custom).jpg"
+        ],
+        "price": 1899,
+        "available": 4,
+        "tags":[
+            "race", 
+            "profesional",
+            "tracer",
+            "cross country"
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Kenevo SW 29",
+        "type": "Mountain Bike",
+        "discipline": "downhill",
+        "model": "Kenevo",
+        "stamp": "Specialized",
+        "images":[
+            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_HERO (Custom).jpg",
+            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_RDSQ (Custom).jpg",
+            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_FDSQ (Custom).jpg",
+            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_D1-POV (Custom).jpg",
+            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_D2-BAR (Custom).jpg",
+            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_D3-HT (Custom).jpg"
+        ],
+        "price": 2599,
+        "available": 3,
+        "tags":[
+            "enduro", 
+            "mtb",
+            "downhill",
+            "cross country"
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Kenevo TURBO 29",
+        "type": "Mountain Bike",
+        "discipline": "downhill",
+        "model": "Kenevo",
+        "stamp": "Specialized",
+        "images":[
+            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_HERO (Custom).jpg",
+            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_RDSQ (Custom).jpg",
+            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_D4-STTT (Custom).jpg",
+            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_D3-HT (Custom).jpg",
+            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_FDSQ (Custom).jpg"
+        ],
+        "price": 2799,
+        "available": 5,
+        "tags":[
+            "enduro", 
+            "mtb",
+            "downhill",
+            "cross country"
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Demo Race",
+        "type": "bike",
+        "discipline": "enduro",
+        "model": "Demo",
+        "stamp": "Specialized",
+        "images":[
+            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_HERO (Custom).jpg",
+            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_RDSQ (Custom).jpg",
+            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_FDSQ (Custom).jpg",
+            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_D2-BAR (Custom).jpg",
+            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_D1-POV (Custom).jpg"
+        ],
+        "price": 1499,
+        "available": 5,
+        "tags":[
+            "enduro", 
+            "mtb",
+            "downhill",
+            "cross country"
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Demo Expert",
+        "type": "Mountain Bike",
+        "discipline": "enduro",
+        "model": "Demo",
+        "stamp": "Specialized",
+        "images":[
+            "./assets/images/DEMO-EXPERT-SILDST-CHAR_HERO (Custom).jpg",
+            "./assets/images/DEMO-EXPERT-SILDST-CHAR_FDSQ (Custom).jpg",
+            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D6-LINK (Custom).jpg",
+            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D4-STTT (Custom).jpg",
+            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D3-HT (Custom).jpg",
+            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D2-BAR (Custom).jpg",
+            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D1-POV (Custom).jpg"
+        ],
+        "price": 2299,
+        "available": 4,
+        "tags":[
+            "enduro", 
+            "mtb",
+            "downhill",
+            "cross country"
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Rockhopper Elite 29",
+        "type": "Tracer Bike",
+        "discipline": "race",
+        "model": "Rockhopper",
+        "stamp": "Specialized",
+        "images":[
+            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_HERO (Custom).jpg",
+            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_RDSQ (Custom).jpg",
+            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_FDSQ (Custom).jpg",
+            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_D3-HT (Custom).jpg",
+            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_D1-POV (Custom).jpg"
+        ],
+        "price": 1999,
+        "available": 2,
+        "tags":[
+            "race", 
+            "profesional",
+            "tracer",
+            "cross country"
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Rockhopper Elite 27",
+        "type": "Tracer Bike",
+        "discipline": "race",
+        "model": "Rockhopper",
+        "stamp": "Specialized",
+        "images":[
+            "./assets/images/ROCKHOPPER-ELITE-27-CSTBLK-BLK_HERO (Custom).jpg",
+            "./assets/images/ROCKHOPPER-ELITE-27-CSTBLK-BLK_RDSQ (Custom).jpg",
+            "./assets/images/ROCKHOPPER-ELITE-27-CSTBLK-BLK_FDSQ (Custom).jpg"
+        ],
+        "price": 1899,
+        "available": 4,
+        "tags":[
+            "race", 
+            "profesional",
+            "tracer",
+            "cross country"
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Kenevo SW 29",
+        "type": "Mountain Bike",
+        "discipline": "downhill",
+        "model": "Kenevo",
+        "stamp": "Specialized",
+        "images":[
+            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_HERO (Custom).jpg",
+            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_RDSQ (Custom).jpg",
+            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_FDSQ (Custom).jpg",
+            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_D1-POV (Custom).jpg",
+            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_D2-BAR (Custom).jpg",
+            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_D3-HT (Custom).jpg"
+        ],
+        "price": 2599,
+        "available": 3,
+        "tags":[
+            "enduro", 
+            "mtb",
+            "downhill",
+            "cross country"
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Kenevo TURBO 29",
+        "type": "Mountain Bike",
+        "discipline": "downhill",
+        "model": "Kenevo",
+        "stamp": "Specialized",
+        "images":[
+            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_HERO (Custom).jpg",
+            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_RDSQ (Custom).jpg",
+            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_D4-STTT (Custom).jpg",
+            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_D3-HT (Custom).jpg",
+            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_FDSQ (Custom).jpg"
+        ],
+        "price": 2799,
+        "available": 5,
+        "tags":[
+            "enduro", 
+            "mtb",
+            "downhill",
+            "cross country"
+        ]
+    }
+]

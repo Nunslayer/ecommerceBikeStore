@@ -40,8 +40,13 @@ body.dark {
 }
 
 a {
-    color: var(--primary-color);
+    color: var(--text-color);
     text-decoration: none;
+}
+a:hover{
+    color:var(--primary-color);
+    font-weight: 400;
+    transition: 0.5s;
 }
 ul{
     margin:0;
@@ -218,25 +223,52 @@ img {
 .rows--product{
     display: grid;
     grid-template-columns: 1fr;
-    gap:1 em;
+    gap: 0;
 }
 
 .column{
     display: grid;
-    margin-left: auto;
-    margin-right: auto;
     align-items: flex-start;
     text-align: center;
+    
 }
-
+.column--right{
+    margin-left: auto;
+    margin-right: auto;
+}
 .column--left{
     display: none;
+    width: 100%;
     position: fixed;
-}
-.card{
-    max-width: 300px;
+    top: 80px;
+    justify-content: center;
+    margin: 0 2vw;
+    max-height: 85vh;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    z-index: 999;
 }
 
+/*  Estilos de la card general */
+.card{
+    min-width: 235px;
+    max-width: 350px;
+    box-shadow: var(--box-shadow);
+    /*background-color: var(--bg-color);*/
+    transition: 1s;
+    border-radius: var(--border-radius);
+}
+
+.card:hover{
+    transform: scale(1.01);
+    cursor: pointer;
+}
+.card--product__img{
+    padding: 1em;
+}
+.card--product__img img {
+    border-radius: var(--border-radius);
+}
 .card--body > *{
     margin: 0;
     padding: 0;
@@ -250,22 +282,27 @@ img {
 
 
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1272px) {
     .rows--product{
         display: grid;
         grid-template-columns: min-content 1fr;
         gap: 0.5em;
+        position: relative;
     }
     .column.column--left{
-        display:grid;
-        position: relative;
+        display:flex;
+        position: sticky;
         grid-template-columns: min-content;
-
+        width: 90%;
+        top: 85px;
+        z-index: 0;
     }
     .column.column--right{
         grid-template-columns: 1fr 1fr 1fr;
         grid-auto-rows: min-content;
+        margin: 0;
         gap: 1rem;
+        padding: 1em;
     }
 }
 
@@ -276,15 +313,23 @@ img {
         display: grid;
         grid-template-columns: min-content 1fr;
         gap: 0.5em;
+        position: relative;
     }
     .column--left{
-        display:grid;
-        position: relative;
+        display:flex;
+        position: sticky;
         grid-template-columns: min-content;
+        width: 90%;
+        top: 85px;
+        z-index: 0;
     }
     .column--right{
         grid-template-columns: 1fr 1fr;
         grid-auto-rows: min-content;
+        margin: 0;
+        gap: 1rem;
+        padding: 1em;
     }
+    
 }
 
