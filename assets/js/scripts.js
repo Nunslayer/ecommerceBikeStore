@@ -152,7 +152,7 @@ const DIRECTION = {
 };
 const resizeSlide = ()=>{
     rootStyles.setProperty('--slide-transition', 'none');
-    rootStyles.setProperty('--slide-transform', `${sliderElements[sliderCounter].scrollWidth}px`);
+    rootStyles.setProperty('--slide-transform', 0);
     //console.log(rootStyles.getPropertyValue('--slide-transform'))
     return
 }
