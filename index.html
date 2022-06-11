@@ -11,8 +11,8 @@
     <title>Bike Store</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body class="dark">
-    <header class="header">
+<body id="body" class="dark">
+    <header id="header" class="header">
         
         <div class="switches">
             <div class="logo">
@@ -20,7 +20,6 @@
             </div>
             <div class="toggle-theme">
                 <i id="toggle-icon" class="fa fa-sun toggle-theme__icon"></i>
-                <p id="toggle-text" class="toggle-theme__text"></p>
             </div>
             <div class="navbar">
                 <ul id="navbar">
@@ -29,14 +28,19 @@
                     <li><a>Componentes</a></li>
                     <li><a>Disciplinas</a></li>
                     <li><a>Contactanos</a></li>
+                    
                 </ul>
+                
+            </div>
+            <div class="button--responsive">
+                <div id="cantidad--total"></div>                        
+                <i class="fas fa-cart-arrow-down"></i>
+                <i class="far fa-user"></i>
+                <i class="fas fa-bars menu--reponsive"></i>
             </div>
         </div>
     </header>
     <!--Slider de la caratula-->
-    <aside class="aside">
-        
-    </aside>
     <main class="main">
         <section class="rows rows--presentation">
             <div class="slider-container" id="slider-container">
@@ -55,21 +59,20 @@
             </div>
         </section>
         <section class="rows rows--product">
-            <div class="column column--left">
+            <div id="carrito--principal" class="column column--left">
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
                         <th scope="col">Item</th>
-                        <th scope="col">Cantidad</th>
-                        <th scope="col">Accion</th>
                         <th scope="col">Total</th>
                     </tr>
                 </thead>
                 <tbody id="items"></tbody>
                 <tfoot>
                     <tr id="footer">
-                        <th scope="row" colspan="5">Haga sus compras!</th>
+                        <th scope="row" >Haga sus compras!</th>
                     </tr>
                 </tfoot>
             </table>
@@ -78,40 +81,51 @@
             
             </div>
             <template id="template--card">
-                <div class="card card--product">
-                    <div class="card--product__img"><img src="" alt="" class="img-card"></div>
+                <div id="card--product" class="card card--product">
+                    
                     <div class="card--body">
+                        <div class="card--product__img"><img src="" alt="" class="img-card"></div>
                         <h2 class="card__tittle"></h2>
-                        <p class="card__discipline"></p>
-                        <p class="card__price"></p>
-                        <button class="button btn-buy"></button>
+                        <div class="card--details">
+                            <p class="card__discipline"></p>
+                            <p class="card__price"></p>
+                        </div>
+                        
                     </div>
+                    <button class="button btn-buy"></button>
                 </div>
             </template>
             <template id="template--footer">
                 <th scope="row" colspan="2">Total</th>
                 <td>10</td>
                 <td>
-                    <button class="btn btn-danger btn-sm" id="vaciar-carrito">
-                        <img src="./assets/icons/icons8-basura-24.svg" alt="">
-                    </button>
+                    
+                        <i id="vaciar-carrito" class="fas fa-trash"></i>
+                    
                 </td>
-                <td class="font-weight-bold"><span>5000</span></td>
+                <td class="font-weight-bold"><span>5000</span> $</td>
             </template>
             <template id="template--carrito">
                 <tr>
-                    <th scope="row">id</th>
-                    <td>cafe</td>
-                    <td>1</td>
-                    <td>
-                        <button class="btn btn-info btn-sm">
-                            +
-                        </button>
-                        <button class="btn btn-danger btn-sm">
-                            -
-                        </button>
+                    <th scope="row"></th>
+                    
+                    <td class="td--imagen"><img src="" alt="">
+                        <div class="contenedor--button">
+                            <button class="btn btn-info btn-sm btn--product">
+                                +
+                            </button>
+                            <button class="btn btn-danger btn-sm btn--product">
+                                -
+                            </button>
+                        </div>
+                        <div class="contenedor--cantidad"><span id="cantidad-comprada"></span></div>
                     </td>
-                    <td><span>500</span>$</td>
+                        
+                    <td></td>
+                    <td>
+                        <span id="precio--total">500</span>$  
+                    </td>
+                    <td></td>
                 </tr>
             </template>
         </section>

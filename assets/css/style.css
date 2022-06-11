@@ -56,17 +56,37 @@ ul{
     column-gap: 2em;
     
 }
+.navbar{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    column-gap: 1em;  
+}
+.active{
+    display: flex;
+    flex-direction: column;
+    background-color:var(--bg-color);
+    position:fixed;
+    justify-content:space-between;
+    align-items: flex-end;
+    left: 0;
+    top: 75px;
+    height: 90vh;
+}
+
+ 
 li{
     color: var(--text-color);
-    font-size: 0.8rem;
+    font-size: 1.5rem;
     padding: 0;
     margin: 0;
     list-style: none;
     cursor:pointer;
 }
-.logo > img{
-    max-width: 100%;
+li:hover{
+    background-color: var(--bg-card-color);
 }
+
 img {
     display: block;
     width: 100%;
@@ -89,6 +109,30 @@ img {
     background-color: var(--bg-card-color);
     transition: var(--transition);
 }
+
+
+.button--responsive {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 1em;
+    position: relative;
+    font-size: 1.5rem;
+}
+#cantidad--total{
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -7px;
+    left: -7px;
+    background-color: red;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 900;
+}
+
  
 @media screen and (min-width: 760px) {
     .header {
@@ -102,6 +146,13 @@ img {
         flex-direction: row;
         justify-content: space-between;
         column-gap: 2em;
+    }
+
+    .button--responsive{
+        display: none;
+    }
+    li{
+        font-size: 0.8rem;
     }
 
 }
@@ -129,6 +180,8 @@ img {
 .toggle-theme__text {
     font-size: 0.8rem;
 }
+
+
 .main{
     display: grid;
     align-items: start;
@@ -188,7 +241,7 @@ img {
 .button {
     background: none;
     border: none;
-    background-color: grey;
+    background-color: var(--bg-card-color);
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -205,14 +258,6 @@ img {
         min-width: 100%;
         height: 600px;
     }
-}
-
-.rows{
-    display: grid;
-}
-
-@media screen and (min-width: 760px) {
-    
 }
 
 .rows{
@@ -238,23 +283,27 @@ img {
 }
 .column--left{
     display: none;
+    background-color: var(--bg-card-color);
     width: 100%;
+    min-height: 85vh;
     position: fixed;
-    top: 80px;
+    top: 77px;
     justify-content: center;
-    margin: 0 2vw;
+    margin: 0 1vw;
     max-height: 85vh;
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
     z-index: 999;
+    min-width: 300px;
 }
-
+.shopping--show{
+    display:flex;
+}
 /*  Estilos de la card general */
 .card{
     min-width: 235px;
     max-width: 350px;
     box-shadow: var(--box-shadow);
-    /*background-color: var(--bg-color);*/
     transition: 1s;
     border-radius: var(--border-radius);
 }
@@ -280,7 +329,43 @@ img {
     background-position: center;
 }
 
-
+td > img{
+    width: 100px;
+    height:auto;
+    box-shadow: var(--box-shadow);
+}
+.td--imagen{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+/*contenedor de botones sobrepuesto en la imagen del producto que va en el carrito*/
+.contenedor--button{
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    right: 0;
+    top:25%;
+    justify-content: space-around;
+}
+.btn--product{
+    border-radius: 50%;
+    background: none;
+    background-color: var(--bg-card-color);
+    border: none;
+    border: 0;
+    cursor: pointer;
+    color:var(--text-color);
+}
+.contenedor--cantidad{
+    position: absolute;
+    bottom: 0;
+    background-color: red;
+    width: 30%;
+    height: 50%;
+    border-radius: 50%;
+    font-weight: 700;
+}
 
 @media screen and (min-width: 1272px) {
     .rows--product{
@@ -292,6 +377,7 @@ img {
     .column.column--left{
         display:flex;
         position: sticky;
+        background-color: var(--bg-color);
         grid-template-columns: min-content;
         width: 90%;
         top: 85px;
@@ -318,7 +404,8 @@ img {
     .column--left{
         display:flex;
         position: sticky;
-        grid-template-columns: min-content;
+        background-color: var(--bg-color);
+        grid-template-columns: 300px;
         width: 90%;
         top: 85px;
         z-index: 0;

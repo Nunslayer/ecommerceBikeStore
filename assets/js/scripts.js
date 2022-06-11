@@ -5,8 +5,24 @@ const templateCard = document.getElementById('template--card').content
 const templateFooter = document.getElementById('template--footer').content
 const templateCarrito = document.getElementById('template--carrito').content
 const fragmentSearch = document.createDocumentFragment();
-
+const body = document.getElementById('body');
+const toggleTheme = document.getElementById('toggle-icon');
+const header = document.getElementById('header');
 let carrito = {}
+
+toggleTheme.addEventListener('click', e =>{
+    body.classList.toggle('dark')
+    const changeTheme = body.classList.contains('dark')
+    if(changeTheme){
+        toggleTheme.classList.replace('fa-moon', 'fa-sun');
+        header.querySelector('img').setAttribute('src',"./assets/icons/specialized-icon.png")
+    }else{
+        toggleTheme.classList.replace('fa-sun', 'fa-moon');
+        header.querySelector('img').setAttribute('src',"./assets/icons/specialized-black.png")
+    }
+
+    e.stopPropagation();
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     fechData();
@@ -14,15 +30,21 @@ document.addEventListener('DOMContentLoaded', () => {
         carrito = JSON.parse(localStorage.getItem('carrito'));
         pintarCarrito();
     }
-})
+    
+});
+
+header.addEventListener('click', e => {
+    bntNavBar(e);
+});
 
 cards.addEventListener('click', e =>{
     addProduct(e);
-})
+});
 
 items.addEventListener('click', e =>{
     btnAccion(e);
-})
+});
+
 const fechData = async () => {
     try {
         const res = await fetch ('./modelo-bici.json');
@@ -31,7 +53,7 @@ const fechData = async () => {
     } catch (error) {
         console.log(error);
     }
-}
+};
 
 const pintarTemplateCard = data => {
     data.forEach(producto => {
@@ -59,9 +81,9 @@ const setCarrito = objeto => {
         id: objeto.querySelector('.btn-buy').dataset.id,
         title: objeto.querySelector('h2').textContent,
         precio: objeto.querySelector('.card__price').textContent,
-        cantidad: 1
+        cantidad: 1,
+        imagen: objeto.querySelector('.img-card').getAttribute('src')
     }
-
     if(carrito.hasOwnProperty(producto.id)){
         producto.cantidad = carrito[producto.id].cantidad+1
     }
@@ -73,12 +95,12 @@ const setCarrito = objeto => {
 const pintarCarrito = ()=>{
     items.innerHTML = '';
     Object.values(carrito).forEach(producto=>{
-        templateCarrito.querySelector('th').textContent = producto.id
-        templateCarrito.querySelectorAll('td')[0].textContent = producto.title
-        templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad
+        templateCarrito.querySelector('img').setAttribute('src', producto.imagen) 
+        templateCarrito.querySelector('#cantidad-comprada').textContent = producto.cantidad
+        templateCarrito.querySelectorAll('td')[1].textContent = producto.title
         templateCarrito.querySelector('.btn-info').dataset.id = producto.id
         templateCarrito.querySelector('.btn-danger').dataset.id = producto.id
-        templateCarrito.querySelector('span').textContent = producto.cantidad * producto.precio
+        templateCarrito.querySelector('#precio--total').textContent = producto.cantidad * producto.precio
 
         const clone = templateCarrito.cloneNode(true)
         fragmentSearch.appendChild(clone)
@@ -96,12 +118,11 @@ const pintarFooter = () =>{
         footer.innerHTML =`<th scope="row" colspan="5">Haga sus compras!</th>`;
         return
     }
-
+    
     const nCantidad = Object.values(carrito).reduce((acc, {cantidad})=> acc + cantidad,0)
     const nPrecio = Object.values(carrito).reduce((acc, {cantidad, precio})=> acc + cantidad * precio,0)
     templateFooter.querySelectorAll('td')[0].textContent = nCantidad
     templateFooter.querySelector('span').textContent = nPrecio
-
     const clone = templateFooter.cloneNode(true)
     fragmentSearch.appendChild(clone)
     footer.appendChild(fragmentSearch)
@@ -111,6 +132,7 @@ const pintarFooter = () =>{
         carrito={};
         pintarCarrito();
     })
+    header.querySelector('#cantidad--total').textContent = nCantidad
 }   
 
 const btnAccion = e =>{
@@ -129,6 +151,19 @@ const btnAccion = e =>{
         }
 
         pintarCarrito();
+    }
+
+    e.stopPropagation();
+};
+
+const bntNavBar = e => {
+    if(e.target.classList.contains('fa-bars')){
+        const ulActive = header.querySelector('ul')
+        ulActive.classList.toggle('active')
+    }
+    if(e.target.classList.contains('fa-cart-arrow-down')){
+        const carritoPrincipal = document.getElementById('carrito--principal')
+        carritoPrincipal.classList.toggle('shopping--show')
     }
 
     e.stopPropagation();
@@ -153,7 +188,6 @@ const DIRECTION = {
 const resizeSlide = ()=>{
     rootStyles.setProperty('--slide-transition', 'none');
     rootStyles.setProperty('--slide-transform', 0);
-    //console.log(rootStyles.getPropertyValue('--slide-transform'))
     return
 }
 
@@ -185,12 +219,9 @@ const moveSlide = (direction)=>{
     if(direction === DIRECTION.LEFT){
         rootStyles.setProperty('--slide-transform', `${transformValue + sliderElements[sliderCounter].scrollWidth}px`);
         sliderCounter--;
-        console.log(rootStyles.getPropertyValue('--slide-transform'));
     }else if(direction===DIRECTION.RIGHT){
         rootStyles.setProperty('--slide-transform', `${transformValue - sliderElements[sliderCounter].scrollWidth}px`);
         sliderCounter++;
-        console.log(rootStyles.getPropertyValue('--slide-transform'));
-        console.log(sliderElements[sliderCounter].scrollWidth);
     }
     
 }
@@ -205,6 +236,5 @@ sliderContainer.addEventListener('resize', resizeSlide);
 reorderSlide();
 
 resizeSlide();
-
 
 
