@@ -58,6 +58,13 @@
                 <button id="button-right" class="button button--right">&gt</button>
             </div>
         </section>
+        <section id="pages" class="rows rows--paginacion--top">
+            <p class="stilos--paginacion"> Pagina <span id="pagina--actual">1</span> de <span id="total--paginas">5 </span><div id="cantidad--paginas"></div>
+            </p> 
+            <template id="template--pages">
+                <a  class="pagina"></a>
+            </template>
+        </section>
         <section class="rows rows--product">
             <div id="carrito--principal" class="column column--left">
             <table class="table">
@@ -78,7 +85,7 @@
             </table>
             </div>
             <div id="cards" class="column column--right">
-            
+                
             </div>
             <template id="template--card">
                 <div id="card--product" class="card card--product">
@@ -87,23 +94,21 @@
                         <div class="card--product__img"><img src="" alt="" class="img-card"></div>
                         <h2 class="card__tittle"></h2>
                         <div class="card--details">
-                            <p class="card__discipline"></p>
+                            <p class="card__stamp"></p>
                             <p class="card__price"></p>
                         </div>
                         
                     </div>
+                    <div class="card__stock"></div>
                     <button class="button btn-buy"></button>
                 </div>
             </template>
             <template id="template--footer">
-                <th scope="row" colspan="2">Total</th>
-                <td>10</td>
+                <th scope="row" colspan="2"></th>
+                <td><i id="vaciar-carrito" class="fas fa-trash"></i></td>
                 <td>
-                    
-                        <i id="vaciar-carrito" class="fas fa-trash"></i>
-                    
-                </td>
-                <td class="font-weight-bold"><span>5000</span> $</td>
+                    <span>5000</span>$</td>
+                <td class="font-weight-bold"></td>
             </template>
             <template id="template--carrito">
                 <tr>
@@ -132,6 +137,6 @@
     </main>
     
     <footer class="footer"></footer>
-    <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/scripts.js" type="module"></script>
 </body>
 </html>

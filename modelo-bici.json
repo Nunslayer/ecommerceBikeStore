@@ -25,7 +25,7 @@
     {
         "id": 2,
         "name": "Demo Expert",
-        "type": "Mountain Bike",
+        "type": "bike",
         "discipline": "enduro",
         "model": "Demo",
         "stamp": "Specialized",
@@ -50,7 +50,7 @@
     {
         "id": 3,
         "name": "Rockhopper Elite 29",
-        "type": "Tracer Bike",
+        "type": "bike",
         "discipline": "race",
         "model": "Rockhopper",
         "stamp": "Specialized",
@@ -73,7 +73,7 @@
     {
         "id": 4,
         "name": "Rockhopper Elite 27",
-        "type": "Tracer Bike",
+        "type": "bike",
         "discipline": "race",
         "model": "Rockhopper",
         "stamp": "Specialized",
@@ -94,7 +94,7 @@
     {
         "id": 5,
         "name": "Kenevo SW 29",
-        "type": "Mountain Bike",
+        "type": "bike",
         "discipline": "downhill",
         "model": "Kenevo",
         "stamp": "Specialized",
@@ -118,7 +118,7 @@
     {
         "id": 6,
         "name": "Kenevo TURBO 29",
-        "type": "Mountain Bike",
+        "type": "bike",
         "discipline": "downhill",
         "model": "Kenevo",
         "stamp": "Specialized",
@@ -140,17 +140,16 @@
     },
     {
         "id": 7,
-        "name": "Demo Race",
+        "name": "Habit F",
         "type": "bike",
         "discipline": "enduro",
-        "model": "Demo",
-        "stamp": "Specialized",
+        "model": "Habit",
+        "stamp": "cannondale",
         "images":[
-            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_HERO (Custom).jpg",
-            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_RDSQ (Custom).jpg",
-            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_FDSQ (Custom).jpg",
-            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_D2-BAR (Custom).jpg",
-            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_D1-POV (Custom).jpg"
+            "./assets/images/C20_C23100F_Habit_Crb_1_CHP_PD (4).jpg",
+            "./assets/images/C20_C23100F_Habit_Crb_1_QSD_3Q (2).jpg",
+            "./assets/images/C20_C23100M_Habit_Crb_1_AGV_3Q (2).jpg",
+            "./assets/images/C20_C23100M_Habit_Crb_1_AGV_PD (4).jpg"
         ],
         "price": 1499,
         "available": 5,
@@ -163,19 +162,16 @@
     },
     {
         "id": 8,
-        "name": "Demo Expert",
-        "type": "Mountain Bike",
+        "name": "Habit M",
+        "type": "bike",
         "discipline": "enduro",
-        "model": "Demo",
-        "stamp": "Specialized",
+        "model": "Habit",
+        "stamp": "cannondale",
         "images":[
-            "./assets/images/DEMO-EXPERT-SILDST-CHAR_HERO (Custom).jpg",
-            "./assets/images/DEMO-EXPERT-SILDST-CHAR_FDSQ (Custom).jpg",
-            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D6-LINK (Custom).jpg",
-            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D4-STTT (Custom).jpg",
-            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D3-HT (Custom).jpg",
-            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D2-BAR (Custom).jpg",
-            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D1-POV (Custom).jpg"
+            "./assets/images/C20_C23200M_Habit_Crb_2_BPL_PD (4).jpg",
+            "./assets/images/C20_C23250M_Habit_Crb_SE_CML_3Q (2).jpg",
+            "./assets/images/C20_C23250M_Habit_Crb_SE_CML_PD (4).jpg",
+            "./assets/images/C20_C23300M_Habit_Crb_3_EMR_PD (4).jpg"
         ],
         "price": 2299,
         "available": 4,
@@ -188,17 +184,16 @@
     },
     {
         "id": 9,
-        "name": "Rockhopper Elite 29",
-        "type": "Tracer Bike",
+        "name": "Scalpelsi Turbo",
+        "type": "bike",
         "discipline": "race",
-        "model": "Rockhopper",
-        "stamp": "Specialized",
+        "model": "Scalpelsi",
+        "stamp": "cannondale",
         "images":[
-            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_HERO (Custom).jpg",
-            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_RDSQ (Custom).jpg",
-            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_FDSQ (Custom).jpg",
-            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_D3-HT (Custom).jpg",
-            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_D1-POV (Custom).jpg"
+            "./assets/images/C20_C25100M_F-Si_HM_WC_GRN_PD (4).jpg",
+            "./assets/images/C20_C25100M_F-Si_HM_WC_GRN_3Q (3).jpg",
+            "./assets/images/C20_C25150M_F-Si_HM_1_BLK_3Q (3).jpg",
+            "./assets/images/C20_C25150M_F-Si_HM_1_BLK_PD (5).jpg"
         ],
         "price": 1999,
         "available": 2,
@@ -211,15 +206,15 @@
     },
     {
         "id": 10,
-        "name": "Rockhopper Elite 27",
-        "type": "Tracer Bike",
+        "name": "Scalpelsi Snow",
+        "type": "bike",
         "discipline": "race",
-        "model": "Rockhopper",
-        "stamp": "Specialized",
+        "model": "Scalpelsi",
+        "stamp": "cannondale",
         "images":[
-            "./assets/images/ROCKHOPPER-ELITE-27-CSTBLK-BLK_HERO (Custom).jpg",
-            "./assets/images/ROCKHOPPER-ELITE-27-CSTBLK-BLK_RDSQ (Custom).jpg",
-            "./assets/images/ROCKHOPPER-ELITE-27-CSTBLK-BLK_FDSQ (Custom).jpg"
+            "./assets/images/C20_C25200M_F-Si_Crb_2_CML_PD (5).jpg",
+            "./assets/images/C20_C25300M_F-Si_Crb_3_ARD_PD (5).jpg",
+            "./assets/images/C20_C25400M_F-Si_Crb_4_CRU_PD (5).jpg"
         ],
         "price": 1899,
         "available": 4,
@@ -232,18 +227,14 @@
     },
     {
         "id": 11,
-        "name": "Kenevo SW 29",
-        "type": "Mountain Bike",
+        "name": "Jekyll Turbo",
+        "type": "bike",
         "discipline": "downhill",
-        "model": "Kenevo",
-        "stamp": "Specialized",
+        "model": "Jekyll",
+        "stamp": "cannondale",
         "images":[
-            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_HERO (Custom).jpg",
-            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_RDSQ (Custom).jpg",
-            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_FDSQ (Custom).jpg",
-            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_D1-POV (Custom).jpg",
-            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_D2-BAR (Custom).jpg",
-            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_D3-HT (Custom).jpg"
+            "./assets/images/C21_C21102U_Jekyll_Crb_1_BGN_PD (5).jpg",
+            "./assets/images/C21_C21102U_Jekyll_1_BGN_3Q (3).jpg"
         ],
         "price": 2599,
         "available": 3,
@@ -256,67 +247,17 @@
     },
     {
         "id": 12,
-        "name": "Kenevo TURBO 29",
-        "type": "Mountain Bike",
+        "name": "Jekyll Frameset M",
+        "type": "component",
         "discipline": "downhill",
-        "model": "Kenevo",
-        "stamp": "Specialized",
+        "model": "Jekyll",
+        "stamp": "cannondale",
         "images":[
-            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_HERO (Custom).jpg",
-            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_RDSQ (Custom).jpg",
-            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_D4-STTT (Custom).jpg",
-            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_D3-HT (Custom).jpg",
-            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_FDSQ (Custom).jpg"
+            "./assets/images/C21_C21181M_Jekyll_Crb_AM_WOW_PD (5).jpg",
+            "./assets/images/C21_C21181M_Jekyll_Crb_AM_WOW_3Q (3).jpg"
+            
         ],
-        "price": 2799,
-        "available": 5,
-        "tags":[
-            "enduro", 
-            "mtb",
-            "downhill",
-            "cross country"
-        ]
-    },
-    {
-        "id": 13,
-        "name": "Demo Race",
-        "type": "bike",
-        "discipline": "enduro",
-        "model": "Demo",
-        "stamp": "Specialized",
-        "images":[
-            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_HERO (Custom).jpg",
-            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_RDSQ (Custom).jpg",
-            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_FDSQ (Custom).jpg",
-            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_D2-BAR (Custom).jpg",
-            "./assets/images/DEMO-RACE-REDONYX-FLORED-BLK_D1-POV (Custom).jpg"
-        ],
-        "price": 1499,
-        "available": 5,
-        "tags":[
-            "enduro", 
-            "mtb",
-            "downhill",
-            "cross country"
-        ]
-    },
-    {
-        "id": 14,
-        "name": "Demo Expert",
-        "type": "Mountain Bike",
-        "discipline": "enduro",
-        "model": "Demo",
-        "stamp": "Specialized",
-        "images":[
-            "./assets/images/DEMO-EXPERT-SILDST-CHAR_HERO (Custom).jpg",
-            "./assets/images/DEMO-EXPERT-SILDST-CHAR_FDSQ (Custom).jpg",
-            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D6-LINK (Custom).jpg",
-            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D4-STTT (Custom).jpg",
-            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D3-HT (Custom).jpg",
-            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D2-BAR (Custom).jpg",
-            "./assets/images/DEMO-EXPERT-SILDST-CHAR_D1-POV (Custom).jpg"
-        ],
-        "price": 2299,
+        "price": 500,
         "available": 4,
         "tags":[
             "enduro", 
@@ -326,18 +267,59 @@
         ]
     },
     {
-        "id": 15,
-        "name": "Rockhopper Elite 29",
-        "type": "Tracer Bike",
-        "discipline": "race",
-        "model": "Rockhopper",
-        "stamp": "Specialized",
+        "id": 13,
+        "name": "Trail SL",
+        "type": "bike",
+        "discipline": "trail",
+        "model": "trail",
+        "stamp": "cannondale",
         "images":[
-            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_HERO (Custom).jpg",
-            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_RDSQ (Custom).jpg",
-            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_FDSQ (Custom).jpg",
-            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_D3-HT (Custom).jpg",
-            "./assets/images/ROCKHOPPER-ELITE-29-REDWD-SPR_D1-POV (Custom).jpg"
+            "./assets/images/C21_C26101M_Trail_SL_1_MTG_3Q (3).jpg",
+            "./assets/images/C21_C26101M_Trail_SL_1_MTG_PD (5).jpg",
+            "./assets/images/C21_C26151F_Trail_SL_3_SLT_3Q (3).jpg",
+            "./assets/images/C21_C26151F_Trail_SL_3_SLT_PD (5).jpg"
+        ],
+        "price": 1499,
+        "available": 5,
+        "tags":[
+            "trail", 
+            "mtb",
+            "racer",
+            "cross country"
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Trail SL 29",
+        "type": "bike",
+        "discipline": "trail",
+        "model": "trail",
+        "stamp": "cannondale",
+        "images":[
+            "./assets/images/C21_C26251F_Trail_SL_4_PUR_3Q (3).jpg",
+            "./assets/images/C21_C26251F_Trail_SL_4_PUR_PD (5).jpg",
+            "./assets/images/C21_C26251M_Trail_SL_2_MDN_3Q (3).jpg",
+            "./assets/images/C21_C26251M_Trail_SL_2_MDN_PD (5).jpg"
+        ],
+        "price": 2299,
+        "available": 4,
+        "tags":[
+            "trail", 
+            "mtb",
+            "racer",
+            "cross country"
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Dave SGY",
+        "type": "bike",
+        "discipline": "cross-country",
+        "model": "Dave",
+        "stamp": "cannondale",
+        "images":[
+            "./assets/images/C21_C29101U_Dave_SGY_3Q (3).jpg",
+            "./assets/images/C21_C29101U_Dave_SGY_PD (5).jpg"
         ],
         "price": 1999,
         "available": 2,
@@ -350,15 +332,14 @@
     },
     {
         "id": 16,
-        "name": "Rockhopper Elite 27",
-        "type": "Tracer Bike",
-        "discipline": "race",
-        "model": "Rockhopper",
-        "stamp": "Specialized",
+        "name": "Trail Neo 1",
+        "type": "bike",
+        "discipline": "trail",
+        "model": "trail",
+        "stamp": "cannondale",
         "images":[
-            "./assets/images/ROCKHOPPER-ELITE-27-CSTBLK-BLK_HERO (Custom).jpg",
-            "./assets/images/ROCKHOPPER-ELITE-27-CSTBLK-BLK_RDSQ (Custom).jpg",
-            "./assets/images/ROCKHOPPER-ELITE-27-CSTBLK-BLK_FDSQ (Custom).jpg"
+            "./assets/images/C21_C61151M_TrailNeo1_SBR_3Q (3).jpg",
+            "./assets/images/C21_C61151M_TrailNeo1_SBR_PD (5).jpg"
         ],
         "price": 1899,
         "available": 4,
@@ -371,18 +352,14 @@
     },
     {
         "id": 17,
-        "name": "Kenevo SW 29",
-        "type": "Mountain Bike",
-        "discipline": "downhill",
-        "model": "Kenevo",
-        "stamp": "Specialized",
+        "name": "Trail Neo 2",
+        "type": "bike",
+        "discipline": "trail",
+        "model": "trail",
+        "stamp": "cannondale",
         "images":[
-            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_HERO (Custom).jpg",
-            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_RDSQ (Custom).jpg",
-            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_FDSQ (Custom).jpg",
-            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_D1-POV (Custom).jpg",
-            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_D2-BAR (Custom).jpg",
-            "./assets/images/KENEVO-SL-SW-CARBON-29-CARB-BLK-DRMSIL_D3-HT (Custom).jpg"
+            "./assets/images/C21_C61251M_TrailNeo2_MAT_3Q (3).jpg",
+            "./assets/images/C21_C61251M_TrailNeo2_MAT_PD (5).jpg"
         ],
         "price": 2599,
         "available": 3,
@@ -395,20 +372,113 @@
     },
     {
         "id": 18,
-        "name": "Kenevo TURBO 29",
-        "type": "Mountain Bike",
-        "discipline": "downhill",
-        "model": "Kenevo",
+        "name": "Trail Neo 3",
+        "type": "bike",
+        "discipline": "trail",
+        "model": "trail",
+        "stamp": "cannondale",
+        "images":[
+            "./assets/images/C21_C61351M_Trail_Neo_3_BLK_3Q (3).jpg",
+            "./assets/images/C21_C61351M_Trail_Neo_3_BLK_PD (5).jpg"
+        ],
+        "price": 2699,
+        "available": 3,
+        "tags":[
+            "enduro", 
+            "mtb",
+            "downhill",
+            "cross country"
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Trail Neo 4",
+        "type": "bike",
+        "discipline": "trail",
+        "model": "trail",
+        "stamp": "cannondale",
+        "images":[
+            "./assets/images/C21_C61451M_Trail_Neo_4_HLT_3Q (3).jpg",
+            "./assets/images/C21_C61451M_Trail_Neo_4_HLT_PD (5).jpg"
+        ],
+        "price": 2599,
+        "available": 4,
+        "tags":[
+            "enduro", 
+            "mtb",
+            "downhill",
+            "cross country"
+        ]
+    },
+    {
+        "id": 20,
+        "name": "RockShox SID SL Ultimate BRAIN",
+        "type": "component",
+        "discipline": null,
+        "model": "RockShox",
         "stamp": "Specialized",
         "images":[
-            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_HERO (Custom).jpg",
-            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_RDSQ (Custom).jpg",
-            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_D4-STTT (Custom).jpg",
-            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_D3-HT (Custom).jpg",
-            "./assets/images/KENEVO-SL-COMP-CARBON-29-BLZ-BLK_FDSQ (Custom).jpg"
+            "./assets/images/98920-780_SUSP_ROCKSHOX-SID-ULTIMATE-BRAIN_GLOSS-BLK-PLRGRY-FOIL_HERO (Custom).jpg"
         ],
-        "price": 2799,
-        "available": 5,
+        "price": 250,
+        "available": 4,
+        "tags":[
+            "enduro", 
+            "mtb",
+            "downhill",
+            "cross country"
+        ]
+    },
+    {
+        "id": 21,
+        "name": "RAPIDE C 38",
+        "type": "component",
+        "discipline": null,
+        "model": "rapide",
+        "stamp": "Specialized",
+        "images":[
+            "./assets/images/30021-450_WHL_C-38-DISC-WHEELSET-SATIN-CARBON-BLK_HERO (Custom).jpg"
+        ],
+        "price": 147,
+        "available": 10,
+        "tags":[
+            "enduro", 
+            "mtb",
+            "downhill",
+            "cross country"
+        ]
+    },
+    {
+        "id": 22,
+        "name": "S-Works Tarmac Carbon",
+        "type": "component",
+        "discipline": null,
+        "model": "S-Works",
+        "stamp": "Specialized",
+        "images":[
+            "./assets/images/28121-390_CMPNT_SW-TARMAC-CARBON-POST-300MM-0-OFFSET_HERO (Custom).jpg"
+        ],
+        "price": 200,
+        "available": 4,
+        "tags":[
+            "enduro", 
+            "mtb",
+            "downhill",
+            "cross country"
+        ]
+    },
+    {
+        "id": 23,
+        "name": "Roval Terra Seatpost",
+        "type": "component",
+        "discipline": null,
+        "model": "Roval Terra",
+        "stamp": "Specialized",
+        "images":[
+            "./assets/images/28121-380_CMPNT_ROVAL-TERRA-CARBON-POST-330MM-20-OFFSET_HERO (Custom).jpg"
+        ],
+        "price": 200,
+        "available": 4,
         "tags":[
             "enduro", 
             "mtb",

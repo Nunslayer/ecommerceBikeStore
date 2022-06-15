@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap');
 :root {
     --primary-color: hsl(214, 84%, 56%);
-    --text-color: hsl(0, 0%, 31%);
+    --text-color: #000;
     --headings-color: hsl(0, 0%, 57%);
     --bg-color: hsl(0, 0%, 90%);
     --bg-card-color: hsl(0, 0%, 98%);
@@ -22,6 +22,7 @@ body{
     padding-top: 75px;
     background-color: var(--bg-color);
     color:var(--text-color);
+    font-weight:600;
     font-family: 'Kanit', sans-serif;
     transition: var(--transition);
 }
@@ -55,6 +56,7 @@ ul{
     justify-content: space-between;
     column-gap: 2em;
     
+    
 }
 .navbar{
     position: relative;
@@ -67,11 +69,12 @@ ul{
     flex-direction: column;
     background-color:var(--bg-color);
     position:fixed;
-    justify-content:space-between;
+    justify-content:space-around;
     align-items: flex-end;
     left: 0;
     top: 75px;
     height: 90vh;
+    
 }
 
  
@@ -82,6 +85,7 @@ li{
     margin: 0;
     list-style: none;
     cursor:pointer;
+    
 }
 li:hover{
     background-color: var(--bg-card-color);
@@ -108,6 +112,7 @@ img {
     z-index: 1;
     background-color: var(--bg-card-color);
     transition: var(--transition);
+    z-index: 999;
 }
 
 
@@ -246,7 +251,7 @@ img {
     width: 50px;
     height: 50px;
     cursor: pointer;
-    color: #ffffff;
+    color: var(--text-color);
 }
   
 .button:active {
@@ -263,6 +268,36 @@ img {
 .rows{
     display: grid;
     gap: 0.5em;
+}
+
+.rows--paginacion--top{
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 77px;
+    gap: 0;
+    z-index: 50;
+}
+.stilos--paginacion{
+    background-color: var(--bg-card-color);
+    border-radius: var(--border-radius);
+}
+.rows--paginacion--top *{
+    margin:0;
+    padding: 0;
+}
+#cantidad--paginas{
+    margin: 0 1rem;
+    border-radius: var(--border-radius);
+    background-color: var(--bg-card-color);
+}
+
+.pagina{
+    padding: 0 0.4rem;
+}
+.onPage{
+    color: var(--primary-color);
+    font-weight: 700;
 }
 
 .rows--product{
@@ -307,22 +342,41 @@ img {
     transition: 1s;
     border-radius: var(--border-radius);
 }
-
+.card--product{
+    position: relative;
+}
 .card:hover{
-    transform: scale(1.01);
+    transform: scale(1.005);
     cursor: pointer;
 }
-.card--product__img{
-    padding: 1em;
+.card__stock{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: var(--bg-card-color);
+    border-radius: 50%;
+    right: 1rem;
 }
-.card--product__img img {
-    border-radius: var(--border-radius);
+.no{
+    background-color: red;
+    text-decoration: line-through;
 }
 .card--body > *{
     margin: 0;
     padding: 0;
 }
-
+.card--body img {
+    padding: 1em;
+    border-radius: 2px;
+}
+.card--details{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
 .btn-buy{
     background-image: url(../icons/shopping-cart\ 3.svg);
     background-repeat: no-repeat;
@@ -331,7 +385,7 @@ img {
 
 td > img{
     width: 100px;
-    height:auto;
+    height:57px;
     box-shadow: var(--box-shadow);
 }
 .td--imagen{
@@ -365,6 +419,7 @@ td > img{
     height: 50%;
     border-radius: 50%;
     font-weight: 700;
+    color:#ffffff
 }
 
 @media screen and (min-width: 1272px) {

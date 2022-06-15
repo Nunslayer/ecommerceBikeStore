@@ -1,6 +1,10 @@
+
 const cards = document.getElementById('cards');
 const items = document.getElementById('items');
 const footer = document.getElementById('footer');
+const pages = document.getElementById('pages');
+const templatePages = document.getElementById('template--pages').content
+const contenedorPages = document.getElementById('cantidad--paginas');
 const templateCard = document.getElementById('template--card').content
 const templateFooter = document.getElementById('template--footer').content
 const templateCarrito = document.getElementById('template--carrito').content
@@ -8,8 +12,9 @@ const fragmentSearch = document.createDocumentFragment();
 const body = document.getElementById('body');
 const toggleTheme = document.getElementById('toggle-icon');
 const header = document.getElementById('header');
+let newData = []
+let paginaActual = 1
 let carrito = {}
-
 toggleTheme.addEventListener('click', e =>{
     body.classList.toggle('dark')
     const changeTheme = body.classList.contains('dark')
@@ -32,6 +37,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
 });
+body.addEventListener('click', e=>{
+    if(e.target.classList.contains('discipline')){
+        filtrarPorTipo()
+    }
+})
 
 header.addEventListener('click', e => {
     bntNavBar(e);
@@ -45,35 +55,93 @@ items.addEventListener('click', e =>{
     btnAccion(e);
 });
 
+contenedorPages.addEventListener('click', e=>{
+    if(e.target.classList.contains('pagina')){
+        paginaActual = Number(e.target.dataset.id)
+        pintarPaginas(newData.length, paginaActual)
+        pintarTemplateCard(newData[paginaActual -1])
+    }
+    e.stopPropagation();
+})
+
 const fechData = async () => {
     try {
         const res = await fetch ('./modelo-bici.json');
         const data = await res.json();
-        pintarTemplateCard(data);
+        splitData(data)
+        
+        
     } catch (error) {
         console.log(error);
     }
+    
 };
 
+const splitData = data =>{
+    let auxArray = []
+    let contador = 0
+    let cantidadElementos = data.length
+    data.forEach(element => {
+        auxArray.push(element)
+        contador++
+        if(auxArray.length === 6){
+            newData.push(auxArray)
+            auxArray=[]
+        }else if(contador === cantidadElementos){
+            newData.push(auxArray)
+            auxArray=[]
+        }
+    });
+    pintarPaginas(newData.length, paginaActual)
+    pintarTemplateCard(newData[paginaActual -1])
+    
+}
+
+
+
 const pintarTemplateCard = data => {
+    cards.innerHTML=''
     data.forEach(producto => {
-        templateCard.querySelector('h2').textContent=producto.name
-        templateCard.querySelector('.card__discipline').textContent=producto.stamp
-        templateCard.querySelector('.card__price').textContent=producto.price
-        templateCard.querySelector('img').setAttribute('src', producto.images[0])
-        templateCard.querySelector('.btn-buy').dataset.id = producto.id
         const clone = templateCard.cloneNode(true)
+        clone.querySelector('h2').textContent=producto.name
+        clone.querySelector('.card__stock').textContent=producto.available
+        clone.querySelector('.card__stamp').textContent=producto.stamp
+        clone.querySelector('.card__price').textContent=producto.price
+        clone.querySelector('img').setAttribute('src', producto.images[0])
+        clone.querySelector('.btn-buy').dataset.id = producto.id
+        if(carrito.hasOwnProperty(producto.id)){
+            if(carrito[producto.id].cantidad >= producto.available){
+                clone.querySelector('.card__stock').classList.add('no')
+        }}
         fragmentSearch.appendChild(clone)
     })
     cards.appendChild(fragmentSearch)
 }
 
 const addProduct = e => {
-    console.log(e.target)
     if(e.target.classList.contains('btn-buy')){
         setCarrito(e.target.parentElement);
     }
     e.stopPropagation();
+}
+
+const pintarPaginas = (totalPages, paginaActual) =>{
+    contenedorPages.innerHTML = ''
+    for(let i =0;i<totalPages;i++){
+        const clone = templatePages.cloneNode(true)
+        clone.querySelector('.pagina').textContent=i+1
+        clone.querySelector('.pagina').dataset.id=i+1
+        if(paginaActual===i+1){
+            clone.querySelector('.pagina').setAttribute('class', 'pagina onPage')
+        }
+        fragmentSearch.appendChild(clone)
+    }
+        
+    contenedorPages.appendChild(fragmentSearch)
+        
+    pages.querySelector('#pagina--actual').textContent=paginaActual
+    pages.querySelector('#total--paginas').textContent=totalPages
+    
 }
 
 const setCarrito = objeto => {
@@ -82,14 +150,20 @@ const setCarrito = objeto => {
         title: objeto.querySelector('h2').textContent,
         precio: objeto.querySelector('.card__price').textContent,
         cantidad: 1,
-        imagen: objeto.querySelector('.img-card').getAttribute('src')
+        imagen: objeto.querySelector('.img-card').getAttribute('src'),
+        stock: objeto.querySelector('.card__stock').textContent
     }
     if(carrito.hasOwnProperty(producto.id)){
         producto.cantidad = carrito[producto.id].cantidad+1
     }
-
-    carrito[producto.id] = {...producto}
-    pintarCarrito();
+    if(producto.cantidad>producto.stock){
+        pintarTemplateCard(newData[paginaActual -1])
+        alert('Lo sentimos stock agotado')
+    }else{
+        carrito[producto.id] = {...producto}
+        pintarCarrito();
+    }
+    
 }
 
 const pintarCarrito = ()=>{
@@ -121,7 +195,7 @@ const pintarFooter = () =>{
     
     const nCantidad = Object.values(carrito).reduce((acc, {cantidad})=> acc + cantidad,0)
     const nPrecio = Object.values(carrito).reduce((acc, {cantidad, precio})=> acc + cantidad * precio,0)
-    templateFooter.querySelectorAll('td')[0].textContent = nCantidad
+    templateFooter.querySelector('th').textContent = nCantidad
     templateFooter.querySelector('span').textContent = nPrecio
     const clone = templateFooter.cloneNode(true)
     fragmentSearch.appendChild(clone)
@@ -131,6 +205,8 @@ const pintarFooter = () =>{
     btnVaciar.addEventListener('click', ()=>{
         carrito={};
         pintarCarrito();
+        pintarTemplateCard(newData[paginaActual -1])
+        header.querySelector('#cantidad--total').textContent = 0
     })
     header.querySelector('#cantidad--total').textContent = nCantidad
 }   
@@ -139,8 +215,14 @@ const btnAccion = e =>{
     if(e.target.classList.contains('btn-info')){
         const producto = carrito[e.target.dataset.id]
         producto.cantidad++
-        carrito[e.target.dataset.id] = {...producto}
-        pintarCarrito();
+        if(producto.cantidad>producto.stock){
+            pintarTemplateCard(newData[paginaActual -1])
+            alert('Lo sentimos stock agotado')
+        }else{
+            carrito[e.target.dataset.id] = {...producto}
+            pintarCarrito();
+        }
+        
     }
 
     if(e.target.classList.contains('btn-danger')){
