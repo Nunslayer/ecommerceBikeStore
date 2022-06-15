@@ -12,6 +12,7 @@ const fragmentSearch = document.createDocumentFragment();
 const body = document.getElementById('body');
 const toggleTheme = document.getElementById('toggle-icon');
 const header = document.getElementById('header');
+const menuSearch =document.getElementById('navbar');
 let newData = []
 let paginaActual = 1
 let carrito = {}
@@ -35,13 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         carrito = JSON.parse(localStorage.getItem('carrito'));
         pintarCarrito();
     }
-    
 });
-body.addEventListener('click', e=>{
-    if(e.target.classList.contains('discipline')){
-        filtrarPorTipo()
-    }
-})
 
 header.addEventListener('click', e => {
     bntNavBar(e);
@@ -54,6 +49,24 @@ cards.addEventListener('click', e =>{
 items.addEventListener('click', e =>{
     btnAccion(e);
 });
+menuSearch.addEventListener('click',e=>{
+    const ulActive = header.querySelector('ul')
+        ulActive.classList.remove('active')
+    if(e.target.classList.contains('marcas')){
+        fechSearch('stamp','cannondale');
+    }
+    if(e.target.classList.contains('equipamiento')){
+        fechSearch('type','equip');
+    }
+    if(e.target.classList.contains('componentes')){
+        fechSearch('type','component');
+    }
+    if(e.target.classList.contains('disciplinas')){
+        fechSearch('discipline','trail');
+    }
+
+    e.stopPropagation();
+})
 
 contenedorPages.addEventListener('click', e=>{
     if(e.target.classList.contains('pagina')){
@@ -63,7 +76,26 @@ contenedorPages.addEventListener('click', e=>{
     }
     e.stopPropagation();
 })
+const fechSearch = async (tipo, valor)=>{
+    try {
+        
+        const res = await fetch ('./modelo-bici.json');
+        const data = await res.json();
+        newData =[]
+        paginaActual = 1
+        filtrarData(data,tipo,valor)
+        
+        
+    } catch (error) {
+        console.log(error);
+        alert('Lo sentimos no se encontraron resultados')
+    }
+}
 
+const filtrarData = (data,tipo,valor)=>{
+    let auxdata = data.filter(d=> d[tipo]==valor)
+    splitData(auxdata)
+}
 const fechData = async () => {
     try {
         const res = await fetch ('./modelo-bici.json');
@@ -99,7 +131,7 @@ const splitData = data =>{
 
 
 
-const pintarTemplateCard = data => {
+const pintarTemplateCard =(data) => {
     cards.innerHTML=''
     data.forEach(producto => {
         const clone = templateCard.cloneNode(true)
